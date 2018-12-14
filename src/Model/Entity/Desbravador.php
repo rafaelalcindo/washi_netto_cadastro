@@ -2,6 +2,7 @@
 namespace App\Model\Entity;
 
 use Cake\ORM\Entity;
+use Cake\Auth\DefaultPasswordHasher;
 
 /**
  * Desbravador Entity
@@ -61,4 +62,9 @@ class Desbravador extends Entity
         'data_cad_desbravador' => true,
         'nivel_desbravador' => true
     ];
+
+    protected function _setSenhaDesbravador($senha) {
+        return (new DefaultPasswordHasher)->hash($senha);
+    }
+    
 }

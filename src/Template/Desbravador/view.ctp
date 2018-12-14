@@ -6,11 +6,11 @@
 ?>
 <nav class="large-3 medium-4 columns" id="actions-sidebar">
     <ul class="side-nav">
-        <li class="heading"><?= __('Actions') ?></li>
-        <li><?= $this->Html->link(__('Edit Desbravador'), ['action' => 'edit', $desbravador->idDesbravador]) ?> </li>
-        <li><?= $this->Form->postLink(__('Delete Desbravador'), ['action' => 'delete', $desbravador->idDesbravador], ['confirm' => __('Are you sure you want to delete # {0}?', $desbravador->idDesbravador)]) ?> </li>
-        <li><?= $this->Html->link(__('List Desbravador'), ['action' => 'index']) ?> </li>
-        <li><?= $this->Html->link(__('New Desbravador'), ['action' => 'add']) ?> </li>
+        <li class="heading"><?= __('Ações') ?></li>
+        <li><?= $this->Html->link(__('Editar Desbravador'), ['action' => 'edit', $desbravador->idDesbravador]) ?> </li>
+        <li><?= $this->Form->postLink(__('Deletar Desbravador'), ['action' => 'delete', $desbravador->idDesbravador], ['confirm' => __('Are you sure you want to delete # {0}?', $desbravador->idDesbravador)]) ?> </li>
+        <li><?= $this->Html->link(__('Listar Desbravador'), ['action' => 'index']) ?> </li>
+        <li><?= $this->Html->link(__('Cadastrar novo Desbravador'), ['action' => 'add']) ?> </li>
         <li><?= $this->Html->link(__('List Unidades'), ['controller' => 'Unidades', 'action' => 'index']) ?> </li>
         <li><?= $this->Html->link(__('New Unidade'), ['controller' => 'Unidades', 'action' => 'add']) ?> </li>
     </ul>
@@ -20,7 +20,7 @@
     <table class="vertical-table">
         <tr>
             <th scope="row"><?= __('Unidade') ?></th>
-            <td><?= $desbravador->has('unidade') ? $this->Html->link($desbravador->unidade->idUnidades, ['controller' => 'Unidades', 'action' => 'view', $desbravador->unidade->idUnidades]) : '' ?></td>
+            <td><?= $desbravador->has('unidade') ? $this->Html->link($desbravador->unidade->nome_unidade, ['controller' => 'Unidades', 'action' => 'view', $desbravador->unidade->idUnidades]) : '' ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('Nome Desbravador') ?></th>

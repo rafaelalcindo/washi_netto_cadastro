@@ -40,6 +40,10 @@ class DesbravadorTable extends Table
             'joinType' => 'INNER'
         ]);
 
+        $this->hasMany('Classes',[
+            'foreignKey' => 'idDesbravador'
+        ]);
+
     }
 
     /**

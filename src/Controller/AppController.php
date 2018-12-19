@@ -63,7 +63,7 @@ class AppController extends Controller
             'unauthorizedRedirect' => $this->referer()
         ]);
 
-        $this->Auth->allow(['display', 'view', 'index']);
+        $this->Auth->allow(['display', 'view', 'index','add','edit','delete']);
 
         /*
          * Enable the following component for recommended CakePHP security settings.
